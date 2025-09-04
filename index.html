@@ -10,10 +10,10 @@
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header>
+   <header>
         <nav>
             <div class="logo">
-                <span class="logo-text">DESENVOLVIMENTO DE SISTEMAS</span>
+                <span class="logo-text">SETEC</span>
                 <span class="pulse"></span>
             </div>
             <ul class="nav-links">
@@ -32,20 +32,36 @@
     <!-- Seção 1: Sobre o Curso -->
     <section id="sobre" class="curso-section">
         <div class="container">
-            <h1 class="section-title">Curso de Desenvolvimento de Sistemas</h1>
+            <h2 class="section-title">Curso de Desenvolvimento de Sistemas</h2>
             <div class="content-grid">
                 <div class="text-content">
                     <p>O curso de Desenvolvimento de Sistemas da SETEC prepara os alunos para os desafios do mercado de tecnologia, fornecendo conhecimentos sólidos em programação, banco de dados, desenvolvimento web e mobile.</p>
                     <p>Nossa abordagem prática e inovadora permite que os estudantes desenvolvam projetos reais desde o primeiro semestre, criando um portfólio consistente ao longo do curso.</p>
-                    
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="number" data-count="90">0</span>
+                            <span class="label">Empregabilidade</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-count="1200">0</span>
+                            <span class="label">Horas de Curso</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-count="15">0</span>
+                            <span class="label">Professores Especialistas</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="media-content">
-                    <div class="video-container">
-                        <div class="video-placeholder">
-                            <i class="fas fa-play"><a href="https://www.youtube.com/watch?v=L61VM6wPFwY" width="300" heigth="300">
-                <img src="https://img.youtube.com/vi/L61VM6wPFwY/maxresdefault.jpg"></i>
-                        </a>
-                            <p>Vídeo demonstrativo do curso</p>
+                    <div class="video-container" onclick="openVideo()">
+                        <div class="video-thumbnail">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'><rect fill='%231a1a40' width='800' height='450'/><path d='M350,175 L550,225 L350,275 Z' fill='%2300f3ff'/><text x='400' y='350' font-family='Arial' font-size='30' fill='%23ffffff' text-anchor='middle'>Introdução ao Curso</text></svg>" alt="Vídeo sobre o curso">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-title">
+                                Introdução ao Curso de Desenvolvimento de Sistemas
+                            </div>
                         </div>
                     </div>
                     <div class="image-gallery">
@@ -57,6 +73,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal de Vídeo -->
+    <div class="video-modal" id="videoModal">
+        <div class="close-modal" onclick="closeVideo()">
+            <i class="fas fa-times"></i>
+        </div>
+        <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <!-- Seção 2: Temas de IA -->
     <section id="ia" class="ia-section">
